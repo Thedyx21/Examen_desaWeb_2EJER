@@ -1,11 +1,10 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { NasaImagesComponent } from './components/nasa-images/nasa-images.component';
-import { ImageDetailsComponent } from './components/image-details/image-details.component';
+import { HomeComponent } from './pages/home/home.component';
+import { GalaxiesComponent } from './pages/galaxies/galaxies.component';
+import { CarruselComponent } from './pages/carrusel/carrusel.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'nasa-images', component: NasaImagesComponent },
-  { path: 'image-details/:id', component: ImageDetailsComponent },
-  { path: '**', redirectTo: '' }
+  { path: 'galaxias', component: GalaxiesComponent },
+  { path: 'carrusel', component: CarruselComponent },
 ];

@@ -1,1 +1,27 @@
-<p>galaxies works!</p>
+<h2>Imágenes de galaxias</h2>
+
+<table border="1" cellpadding="10" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Centro</th>
+      <th>Acción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let galaxy of galaxies">
+      <td>{{ galaxy.data[0]?.title }}</td>
+      <td>{{ galaxy.data[0]?.center }}</td>
+      <td>
+        <button (click)="showImages(galaxy)">Ver imágenes</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="selectedImages.length > 0">
+  <h3>Imágenes relacionadas</h3>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <img *ngFor="let img of selectedImages" [src]="img" width="200">
+  </div>
+</div>

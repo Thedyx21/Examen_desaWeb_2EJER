@@ -10,6 +10,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(),
     provideClientHydration(),
-    importProvidersFrom(NgbModule) // Configuración básica sin i18n
+    importProvidersFrom(NgbModule) ,
+    provideHttpClient()// Configuración básica sin i18n
   ]
 };
